@@ -139,6 +139,9 @@ body::before {
 }
 
 #display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   font-size: 3em;
   height: 55px;
