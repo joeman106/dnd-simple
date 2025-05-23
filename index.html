@@ -10,172 +10,190 @@
   <h1>Welcome to Dnd Simple!</h1>
   
   <body>
-    <div class="rolloMaticBox">
+    <div class = box-and-scroll>
+    <div class = box-and-slider>
+      <div class="rolloMaticBox">
 
-      <h2>DnD Roller v1</h2>
+        <h2>DnD Roller v1</h2>
 
-    <div class = "column-layout">
-      <div class="row-layout">
-        <div class ="left-column">
+      <div class = "column-layout">
+        <div class="row-layout">
+          <div class ="left-column">
 
-          <div class="button-container">
-            <button
-              onclick="rollDice(4, 'd4modifier')"
-              class="left-buttons-style"
-              aria-label="Roll D4"
-            >
-              D4
-            </button>
-            <input
-              type="number"
-              id="d4modifier"
-              min="-5"
-              max="10"
-              value="0"
-              class="modifier-input"
-              placeholder="+0"
-            />
+            <div class = button-descript>
+              <p>Dice Sides</p>
+              <p>+</p>
+              <p>Modifier</p>
+            </div>
+
+            <div class="button-container">
+              <button
+                onclick="rollDice(4, 'd4modifier')"
+                class="left-buttons-style"
+                aria-label="Roll D4"
+              >
+                D4
+              </button>
+              <input
+                type="number"
+                id="d4modifier"
+                min="-5"
+                max="10"
+                value="0"
+                class="modifier-input"
+                placeholder="+0"
+              />
+            </div>
+    
+              <div class="button-container">
+                <button
+                  onclick="rollDice(6, 'd6modifier')"
+                  class="left-buttons-style"
+                  aria-label="Roll D6"
+                >
+                  D6
+                </button>
+                <input
+                  type="number"
+                  id="d6modifier"
+                  min="-5"
+                  max="15"
+                  value="0"
+                  class="modifier-input"
+                  placeholder="+0"
+                />
+              </div>
+      
+              <div class="button-container">
+                <button
+                  onclick="rollDice(8, 'd8modifier')"
+                  class="left-buttons-style"
+                  aria-label="Roll D8"
+                >
+                  D8
+                </button>
+                <input
+                  type="number"
+                  id="d8modifier"
+                  min="-5"
+                  max="20"
+                  value="0"
+                  class="modifier-input"
+                  placeholder="+0"
+                />
+              </div>
+      
+              <div class="button-container">
+                <button
+                  onclick="rollDice(10, 'd10modifier')"
+                  class="left-buttons-style"
+                  aria-label="Roll D10"
+                >
+                  D10
+                </button>
+                <input
+                  type="number"
+                  id="d10modifier"
+                  min="-5"
+                  max="25"
+                  value="0"
+                  class="modifier-input"
+                  placeholder="+0"
+                />
+              </div>
+      
+              <div class="button-container">
+                <button
+                  onclick="rollDice(12, 'd12modifier')"
+                  class="left-buttons-style"
+                  aria-label="Roll D12"
+                >
+                  D12
+                </button>
+                <input
+                  type="number"
+                  id="d12modifier"
+                  min="-5"
+                  max="25"
+                  value="0"
+                  class="modifier-input"
+                  placeholder="+0"
+                />
+              </div>
+      
+              <div class="button-container">
+                <button
+                  onclick="rollDice(20, 'd20modifier')"
+                  class="left-buttons-style"
+                  aria-label="Roll D20"
+                >
+                  D20
+                </button>
+                <input
+                  type="number"
+                  id="d20modifier"
+                  min="-5"
+                  max="30"
+                  value="0"
+                  class="modifier-input"
+                  placeholder="+0"
+                />
+              </div>
+
           </div>
-  
-            <div class="button-container">
-              <button
-                onclick="rollDice(6, 'd6modifier')"
-                class="left-buttons-style"
-                aria-label="Roll D6"
-              >
-                D6
-              </button>
-              <input
-                type="number"
-                id="d6modifier"
-                min="-5"
-                max="15"
-                value="0"
-                class="modifier-input"
-                placeholder="+0"
-              />
-            </div>
-    
-            <div class="button-container">
-              <button
-                onclick="rollDice(8, 'd8modifier')"
-                class="left-buttons-style"
-                aria-label="Roll D8"
-              >
-                D8
-              </button>
-              <input
-                type="number"
-                id="d8modifier"
-                min="-5"
-                max="20"
-                value="0"
-                class="modifier-input"
-                placeholder="+0"
-              />
-            </div>
-    
-            <div class="button-container">
-              <button
-                onclick="rollDice(10, 'd10modifier')"
-                class="left-buttons-style"
-                aria-label="Roll D10"
-              >
-                D10
-              </button>
-              <input
-                type="number"
-                id="d10modifier"
-                min="-5"
-                max="25"
-                value="0"
-                class="modifier-input"
-                placeholder="+0"
-              />
-            </div>
-    
-            <div class="button-container">
-              <button
-                onclick="rollDice(12, 'd12modifier')"
-                class="left-buttons-style"
-                aria-label="Roll D12"
-              >
-                D12
-              </button>
-              <input
-                type="number"
-                id="d12modifier"
-                min="-5"
-                max="25"
-                value="0"
-                class="modifier-input"
-                placeholder="+0"
-              />
-            </div>
-    
-            <div class="button-container">
-              <button
-                onclick="rollDice(20, 'd20modifier')"
-                class="left-buttons-style"
-                aria-label="Roll D20"
-              >
-                D20
-              </button>
-              <input
-                type="number"
-                id="d20modifier"
-                min="-5"
-                max="30"
-                value="0"
-                class="modifier-input"
-                placeholder="+0"
-              />
-            </div>
+              <div class ="right-column">
 
+                <div id="display" class="roll-result"></div>
+
+                <button
+                onclick="rollDice(2)"
+                class="right-buttons-style"
+                aria-labe="four d6"
+              >
+                Flip a coin!
+              </button>
+
+              <button
+                onclick="attributeGenerator()"
+                class="right-buttons-style"
+                aria-label="four d6"
+              >
+                Roll four d6!
+              </button>
+          </div>
         </div>
-            <div class ="right-column">
 
-              <div id="display" class="roll-result"></div>
-
-              <button
-              onclick="rollDice(2)"
-              class="right-buttons-style"
-              aria-labe="four d6"
-            >
-              Flip a coin!
-            </button>
-
-            <button
-              onclick="attributeGenerator()"
-              class="right-buttons-style"
-              aria-label="four d6"
-            >
-              Roll four d6!
-            </button>
+        <div class="d100-button-container">
+          <button
+            onclick="rollDice(100, null)"
+            class="d100"
+            aria-label="Roll D100"
+          >
+            D100
+          </button>
         </div>
-      </div>
 
-      <div class="d100-button-container">
-        <button
-          onclick="rollDice(100, null)"
-          class="d100"
-          aria-label="Roll D100"
-        >
-          D100
-        </button>
       </div>
-
     </div>
+    
+    <div class = rolltime-slider-container>
+      <div class = slider-and-text>
+      Foam<input type = "range" min = "2" max = "12" value = "7" class = "rolltime-slider" id = "rolltime-slider">Metal</input>
+    </div>
+      <div class = slider-descript>
+        Modify dice material to adjust rolltime!
+      </div>
+    </div>
+
   </div>
+
+    <div class = stored-rolls-container>
+      <h3>Last rolls!</h3>
+      <div class = rolls-array id = rolls-array></div>
+    </div>
+    </div>
 </div>
 
-    <!--
-          <div id="rolls-array">
-        Hello
-        <div id="rolls-text">Rolls Log:</div>
-        <div id="scroll-img"></div>
-      </div>
-    -->
 
     <script src="DiceRoller.js"></script>
   </body>

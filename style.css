@@ -43,6 +43,26 @@ body::before {
   z-index: -1;
 }
 
+.box-and-scroll {
+  display: flex;
+  flex-direction: row;
+}
+
+.button-descript {
+  font: bold;
+  font-size: 1;
+  color: crimson;
+  display: flex;
+  flex-direction: row;
+  gap: 1.6em;
+}
+
+.left-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .row-layout {
   display: flex;
   flex-direction: row;
@@ -59,10 +79,6 @@ body::before {
 
 .rolloMaticBox {
   display: block;
-  max-height: 90vh;
-  overflow-y: auto;
-  height: 600px;
-  width: 500px;
   border: 10px ridge black;
   border-radius: 25px;
   padding: 10px;
@@ -74,7 +90,7 @@ body::before {
   font-family: var(--main-font);
   font-size: 1em;
   text-shadow: var(--text-shadow);
-  text-align: horizontal;
+  opacity: 0.8;
   display: flex;
   justify-content: center;
   width: 15px;
@@ -84,10 +100,6 @@ body::before {
   cursor: pointer;
   border-radius: 20px;
   border: 5px ridge black;
-}
-
-.left-column {
-  max-width: 4dh;
 }
 
 .button-container {
@@ -108,6 +120,7 @@ body::before {
 .d100 {
   font-family: "verdana";
   font-size: 1.5em;
+  opacity: 0.8;
   text-shadow: var(--text-shadow);
   display: flex;
   vertical-align: middle;
@@ -154,6 +167,7 @@ body::before {
 .right-buttons-style {
   color: white;
   background-color: rgb(0, 85, 0);
+  opacity: 0.8;
   font: 15px verdana;
   text-shadow: var(--text-shadow);
   width: 100px;
@@ -163,25 +177,95 @@ body::before {
   cursor: pointer;
 }
 
-#scroll-img {
-  position: relative;
-  left: 475px;
-  width: 600px;
-  height: 550px;
-  background-image: url("Assets/Blank-scroll.png");
-  background-size: 100%;
-  overflow: hidden;
-  z-index: -1;
+.box-and-slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3em;
 }
 
-#rolls-text {
+.slider-and-text {
+  display: flex;
+  gap: 1em;
+}
+
+.rolltime-slider-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.rolltime-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 80%;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+.rolltime-slider::-moz-range-thumb {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: url("./Assets/Dice_svgs.png");
+  background-size: cover;
+  cursor: pointer;
+  transform: translateY(-10px); /* Use transform for Firefox */
+}
+
+.rolltime-slider:hover,
+.left-buttons-style:hover,
+.right-buttons-style:hover,
+.d100:hover {
+  opacity: 1;
+}
+
+.rolltime-slider::-webkit-slider-runnable-track {
+  height: 6px;
+}
+
+.rolltime-slider::-moz-range-track {
+  height: 6px;
+}
+
+.rolltime-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  margin-top: -7%;
+  width: 50px;
+  height: 50px;
+  background: url(Assets/final_clean_cropped_dice.png);
+  background-size: contain;
+  cursor: pointer;
+}
+
+.slider-descript {
+  font-size: 1.5rem;
+  color: crimson;
   text-align: center;
-  text-shadow: var(--text-shadow);
-  font-size: large;
-  position: relative;
-  left: 475px;
-  width: 265px;
-  height: 315px;
+}
+
+.stored-rolls-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20%;
+  height: 25vw;
+  width: 25vw;
+  display: flex;
+  text-align: center;
+  background: url(Assets/Blank-scroll.png);
+  background-size: cover;
+}
+
+#rolls-array{
+  text-align: left;
+  font-size: 1em;
+  width: 40%;
+  height: 45%;
 }
 
 @media (max-width: 750px) {
